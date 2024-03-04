@@ -1,42 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace CMP1903_A1_2324
 {
     internal class Game
     {
-        /*
-         * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
-         *
-         * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
-         * rolls could be continous, and the totals and other statistics could be summarised for example.
-         */
+        private int Roll_Value1 = 0;
+        private int Roll_Value2 = 0;
+        private int Roll_Value3 = 0;
+        public int Sum = 0;
 
-
-        public Game() 
+        public Game()
         {
             Die Die1 = new Die();
-            int Roll_Value1 = Die1.Roll();
+            Roll_Value1 = Die1.Roll();
             Console.WriteLine(Roll_Value1);
 
             Die Die2 = new Die();
-            int Roll_Value2 = Die1.Roll();
+            Roll_Value2 = Die1.Roll();
             Console.WriteLine(Roll_Value2);
 
             Die Die3 = new Die();
-            int Roll_Value3 = Die1.Roll();
+            Roll_Value3 = Die1.Roll();
             Console.WriteLine(Roll_Value3);
 
-            //Methods
-            int Combined_Roll = Roll_Value1 + Roll_Value2 + Roll_Value3;
-            Console.WriteLine(Combined_Roll);
+
+
+            Sum = Roll_Value1 + Roll_Value2 + Roll_Value3;
+            Console.WriteLine(Sum);
         }
-
-
-
-
+        
     }
+
 }
