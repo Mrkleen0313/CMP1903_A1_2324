@@ -16,25 +16,29 @@ namespace CMP1903_A1_2324
         private int Roll_Value3 = 0;
         public int Sum = 0;
 
-        public Game()
+        public int play()
         {
             Die Die1 = new Die();
             Roll_Value1 = Die1.Roll();
-            Console.WriteLine(Roll_Value1);
+            
 
             Die Die2 = new Die();
             Roll_Value2 = Die1.Roll();
-            Console.WriteLine(Roll_Value2);
+            
 
             Die Die3 = new Die();
             Roll_Value3 = Die1.Roll();
-            Console.WriteLine(Roll_Value3);
+            
 
 
 
-            Sum = Roll_Value1 + Roll_Value2 + Roll_Value3;
-            Console.WriteLine(Sum);
+            int j = Roll_Value1 + Roll_Value2 + Roll_Value3;
+            int Sum = j;
+
+            
+            return Sum;
         }
+
         
     }
 

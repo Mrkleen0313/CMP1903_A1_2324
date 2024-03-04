@@ -15,7 +15,7 @@ namespace CMP1903_A1_2324
     internal class Die
     {
         //Fields
-        public int Roll_Value = 0;
+        private int Roll_Value = 0;
         private Random random = new 
         Random(Guid.NewGuid().GetHashCode());
 

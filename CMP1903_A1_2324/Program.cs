@@ -16,7 +16,13 @@ namespace CMP1903_A1_2324
              */
 
             Game Game1 = new Game();
-            Console.WriteLine(Game1);
+            int Thrown_Dice_Values = Game1.play();
+
+            Testing test = new Testing();
+            int Check_Sum = test.V_check_Sum();
+            Console.WriteLine("TEST: " + Check_Sum);
+
+            Console.WriteLine("TDV" + Thrown_Dice_Values);
         }
     }
 }
