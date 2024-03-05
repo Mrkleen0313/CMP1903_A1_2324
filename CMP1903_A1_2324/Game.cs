@@ -16,7 +16,7 @@ namespace CMP1903_A1_2324
         private int Roll_Value3 = 0;
         public int Sum = 0;
 
-        public int play()
+        public int Sum_Total()
         {
             Die Die1 = new Die();
             Roll_Value1 = Die1.Roll();
@@ -34,7 +34,6 @@ namespace CMP1903_A1_2324
 
             int j = Roll_Value1 + Roll_Value2 + Roll_Value3;
             int Sum = j;
-
             
             return Sum;
         }

@@ -19,11 +19,13 @@ namespace CMP1903_A1_2324
         private Random random = new 
         Random(Guid.NewGuid().GetHashCode());
 
+        //Method
         public int Roll()
-        {//method
+        {
 
             int i = random.Next(1,7);
             Roll_Value = i;
+            Console.WriteLine("You rolled a : " + i);
             return Roll_Value;
 
         }
