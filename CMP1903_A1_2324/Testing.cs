@@ -16,23 +16,23 @@ namespace CMP1903_A1_2324
          * Use debug.assert() to make the comparisons and tests.
          */
 
-
+        private int Check_Sum = 0;
+        private int Dice_Value = 0;
+        
 
         //Method
-        public int V_check_Sum()
+        public int V_Check_Sum()
         {
-
-        Game Game1 = new Game();
-        int k = Game1.Sum_Total();
-        int Thrown_Dice_Values = k;
-
-        Debug.Assert(Thrown_Dice_Values >= 3 | Thrown_Dice_Values <= 18);
-
-        Console.WriteLine("The thrown dice total value is: " + Thrown_Dice_Values);
-
-        int Check_Sum = k;
+            
+        Game Gametest = new Game();
+        Gametest.Roll_1();
+        int Check_Sum = Gametest.Sum_Test();
+        
+            
+            Debug.Assert(Check_Sum >= 3 && Check_Sum < 19, "the total value is not possible");
+        
         return Check_Sum;
-
+            
         }
         
         public int D_Check_Value()
@@ -42,9 +42,9 @@ namespace CMP1903_A1_2324
         int L = die1.Roll();
         int Dice_Value = L;
         
-        Debug.Assert(Dice_Value >= 1 | Dice_Value < 7);
+        Debug.Assert(Dice_Value >= 1 && Dice_Value < 7, "the dice has been lost");
             
-        Console.WriteLine("The test dice has rolled a : " + Dice_Value);
+        
             return Dice_Value;
         }
 

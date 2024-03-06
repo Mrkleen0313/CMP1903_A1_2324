@@ -15,17 +15,17 @@ namespace CMP1903_A1_2324
     internal class Die
     {
         //Fields
-        private int Roll_Value = 0;
+        private int Roll_Value = 0; //private integer to ensure that it cannot be changed by other files 
         private Random random = new 
-        Random(Guid.NewGuid().GetHashCode());
+        Random(Guid.NewGuid().GetHashCode());//pulled from stack overflow to fix error where dice roll same value due to tick speed being the seed for psuedo random 
 
         //Method
-        public int Roll()
+        public int Roll()//method which assigns the value of i (1-7), to the private property inside this class
         {
 
-            int i = random.Next(1,7);
-            Roll_Value = i;
-            Console.WriteLine("You rolled a : " + i);
+            int i = random.Next(1,7);//chooses a random number inclusive of 1 and exclusive of 7
+            Roll_Value = i;// assigns the value of i to Roll_Value
+            
             return Roll_Value;
 
         }
